@@ -15,7 +15,6 @@ const AuthLayout = (props: propTypes) => {
 
   return (
     <div className="mb-5 flex h-screen w-screen flex-col items-center justify-center text-lg">
-      {/* <h1 className="mb-5 text-3xl">{title}</h1> */}
       <Image
         src="/coffe-logo.jpg"
         alt="Logo"

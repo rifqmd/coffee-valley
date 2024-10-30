@@ -33,7 +33,9 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <div className={lato.className}>
-        {!disableNavbar.includes(pathname.split("/")[1]) && <Navbar />}
+        {!disableNavbar.includes(pathname.split("/")[1]) && (
+          <Navbar lists={[]} />
+        )}
         <Component {...pageProps} setToaster={setToaster} />
 
         {/* checker toaster */}

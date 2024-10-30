@@ -1,4 +1,5 @@
-import Sidebar from "@/components/fragments/Sidebar";
+import Footer from "@/components/fragments/Footer";
+import Navbar from "@/components/fragments/Navbar";
 import Head from "next/head";
 
 type PropTypes = {
@@ -6,11 +7,26 @@ type PropTypes = {
   pageTitle: string;
 };
 
-const listSidebarItem = [
+const listNavbarItem = [
   {
     title: "Dashboard",
     url: "/admin",
-    icon: "bxs-dashboard",
+  },
+  {
+    title: "Catalog",
+    url: "/admin/catalog",
+  },
+  {
+    title: "Order Status",
+    url: "/admin/order-status",
+  },
+  {
+    title: "Distributors",
+    url: "/admin/distributor",
+  },
+  {
+    title: "Upload",
+    url: "/admin/upload",
   },
 ];
 
@@ -26,8 +42,9 @@ const AdminLayout = (props: PropTypes) => {
         />
       </Head>
       <div className="flex">
-        <Sidebar lists={listSidebarItem} />
+        <Navbar lists={listNavbarItem} />
         <div className="w-full px-14 py-10">{children}</div>
+        <Footer />
       </div>
     </>
   );
